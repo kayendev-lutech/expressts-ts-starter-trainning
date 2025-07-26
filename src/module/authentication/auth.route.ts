@@ -1,10 +1,10 @@
 import { WrapperClass } from '@utils/wrapper.util.js';
 import { Router } from 'express';
 import { AuthController } from '@module/authentication/controller/auth.controller.js';
-import { validateRequest } from 'src/middleware/dto-validator.js';
+import { validateRequest } from '../../middleware/dto-validator.js';
 import { RegisterUserDto } from '@module/authentication/dto/register.dto.js';
 import { LoginUserDto } from '@module/authentication/dto/login.dto.js';
-import authMiddleware from 'src/middleware/auth.middleware.js';
+import authMiddleware from '../../middleware/auth.middleware.js';
 const router = Router();
 const wrappedLoginController = new WrapperClass(
   new AuthController(),

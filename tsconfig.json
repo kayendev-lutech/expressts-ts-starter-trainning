@@ -8,6 +8,7 @@
         "esModuleInterop": true,
         "strict": true,
         "skipLibCheck": true,
+        "isolatedModules": true,
         "forceConsistentCasingInFileNames": true,
         "outDir": "./dist",
         "rootDir": "./src",
@@ -27,7 +28,7 @@
                 "src/model/*"
             ],
             "@middlewares/*": [
-                "src/middlewares/*"
+                "src/middleware/*"
             ],
             "@utils/*": [
                 "src/utils/*"

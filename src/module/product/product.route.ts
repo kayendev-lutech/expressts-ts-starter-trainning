@@ -2,7 +2,7 @@ import { WrapperClass } from '@utils/wrapper.util.js';
 import { Router } from 'express';
 import { ProductController } from '@module/product/controller/product.controller.js';
 // validate dto
-import { validateRequest } from 'src/middleware/dto-validator.js';
+import { validateRequest } from '../../middleware/dto-validator.js';
 import { PaginationQueryDto } from './dto/pagination.dto.js';
 import { IdParamDto } from './dto/id-param.dto.js';
 const router = Router();

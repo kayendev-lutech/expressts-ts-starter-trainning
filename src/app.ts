@@ -1,14 +1,14 @@
 import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
-import { globalLimiter, authLimiter } from './config/rateLimit.config.js';
-import { corsOptions } from './config/cors.config.js';
-import { helmetOptions,  } from './config/helmet.config.js';
+import { globalLimiter, authLimiter } from '@config/rateLimit.config.js';
+import { corsOptions } from '@config/cors.config.js';
+import { helmetOptions,  } from '@config/helmet.config.js';
 // Middleware
-import { errorHandler } from './middleware/errorHandler.js';
-import { generateDeviceIdMiddleware } from './middleware/deviceId-generator.middleware.js';
-import apiWatcher from './middleware/api-watcher.middleware.js';
-import notFoundHandler from './middleware/notFoundHandler.js';
+import { errorHandler } from '@middlewares/errorHandler.js';
+import { generateDeviceIdMiddleware } from '@middlewares/deviceId-generator.middleware.js';
+import apiWatcher from '@middlewares/api-watcher.middleware.js';
+import notFoundHandler from '@middlewares/notFoundHandler.js';
 // Routes
 import healthRoute from '@module/health/health.route.js';
 import userRoute from '@module/user/user.route.js';

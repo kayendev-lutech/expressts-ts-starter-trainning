@@ -20,8 +20,12 @@ export const AppDataSource = new DataSource({
   username: dbUser,
   password: dbPassword,
   database: dbName,
-  entities: ['src/module/**/entity/*.entity.{ts,js}'],
-  migrations: ['src/database/migrations/*.{ts,js}'],
+  entities: [process.env.NODE_ENV === 'production'
+    ? 'dist/module/**/entity/*.entity.js'
+    : 'src/module/**/entity/*.entity.{ts,js}'],
+  migrations: [process.env.NODE_ENV === 'production'
+    ? 'dist/database/migrations/*.js'
+    : 'src/database/migrations/*.{ts,js}'],
   synchronize: false,
   logging: false,
 });

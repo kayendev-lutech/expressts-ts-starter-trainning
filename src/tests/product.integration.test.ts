@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../../src/app.js'; // Đường dẫn tới file app Express của bạn
+import app from '../app.js'; 
 
 describe('Product API Integration', () => {
   it('GET /api/v1/product trả về 200 và có data', async () => {
